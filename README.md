@@ -10,3 +10,7 @@ PWA derivado da extensão de Pomodoro, com backend próprio de frases, container
 
 ## Como rodar localmente
 
+# Atenção
+
+A API de frases só funciona quando o projeto é rodado localmente via Docker Compose.
+Na versão GitHub Pages, o front tenta consumir localhost:3000, o que não é permitido pelos navegadores por motivos de segurança (CORS/mixed content).
