@@ -136,7 +136,12 @@ Sempre que há um `push` na branch `main`:
 2. Em caso de sucesso, o GitHub Pages é atualizado automaticamente com a versão mais recente da PWA.
 
 ---
-
+## Feito por
+- Pedro Alves Balduino Dias
+- Pedro Barreto Palheta de Oliveira
+- Lucas Amaral Evangelista
+- Luiz Henrique Romualdo da Silva Guedes
+---
 ## Links úteis para correção
 
 - **Repositório:**  
@@ -150,11 +155,4 @@ Sempre que há um `push` na branch `main`:
 
 - **Vídeo/GIF de demonstração:**  
   (inserir link do vídeo ou GIF mostrando: uso do timer, instalação do PWA e consumo da API local)
-
-
-## Feito por
-- Pedro Alves Balduino Dias
-- Pedro Barreto Palheta de Oliveira
-- Lucas Amaral Evangelista
-- Luiz Henrique Romualdo da Silva Guedes
 ---
