@@ -36,12 +36,10 @@ Passos:
 git clone https://github.com/PedroAlves2707/Entrega-Final.git
 cd Entrega-Final
 
-text
 
 2. Subir o ambiente com Docker Compose:
 docker compose up --build
 
-text
 
 3. Acessar:
 - PWA (frontend):  
@@ -51,8 +49,6 @@ text
 
 Para parar os containers:
 docker compose down
-
-text
 
 ---
 
@@ -65,7 +61,6 @@ Dentro de `apps/web`:
 npm install
 npm test
 
-text
 
 ### API (Node/Express)
 
@@ -74,7 +69,6 @@ Dentro de `apps/api`:
 npm install
 npm test
 
-text
 
 ### Testes E2E (Playwright)
 
@@ -83,7 +77,6 @@ Com o frontend rodando (via Docker ou `npm`):
 cd apps/web/public/tests/e2e
 npx playwright test
 
-text
 
 ---
 
@@ -153,7 +146,7 @@ Sempre que há um `push` na branch `main`:
   `https://pedroalves2707.github.io/Entrega-Final/`
 
 - **Último run do CI (GitHub Actions):**  
-  (inserir o link do run estável aqui)
+  `https://github.com/PedroAlves2707/Entrega-Final/actions`
 
 - **Vídeo/GIF de demonstração:**  
   (inserir link do vídeo ou GIF mostrando: uso do timer, instalação do PWA e consumo da API local)
