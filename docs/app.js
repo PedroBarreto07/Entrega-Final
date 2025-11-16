@@ -16,16 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let isHighlighting = false;
   let deferredPrompt = null;
 
-  const API_URL =
-    window.API_URL || 'http://localhost:3000/api/quote';
+  // Detecta se está rodando no GitHub Pages
+  const isGithubPages = window.location.hostname.includes('github.io');
+
+  // Só usa API local quando não estiver no Pages
+  const API_URL = isGithubPages
+    ? null
+    : (window.API_URL || 'http://localhost:3000/api/quote');
 
   function updateTimerDisplay() {
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
-    timerDisplay.textContent = `${String(minutes).padStart(
-      2,
-      '0'
-    )}:${String(seconds).padStart(2, '0')}`;
+    timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(
+      seconds
+    ).padStart(2, '0')}`;
   }
 
   function startTimer() {
@@ -76,6 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function fetchQuote() {
+    // Se estiver no Pages, mostra texto fixo e não chama a API local
+    if (!API_URL) {
+      quoteTextEl.textContent =
+        'Frase dinâmica disponível apenas quando a API local (Docker) está rodando.';
+      quoteTextEl.dataset.author = 'ExtCrias API local';
+      apiStatusEl.classList.add('offline');
+      apiStatusEl.classList.remove('online');
+      return;
+    }
+
     quoteTextEl.textContent = 'Buscando nova frase...';
     quoteTextEl.dataset.author = '';
 
